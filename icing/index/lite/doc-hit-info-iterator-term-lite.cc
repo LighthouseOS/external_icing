@@ -45,8 +45,8 @@ libtextclassifier3::Status DocHitInfoIteratorTermLite::Advance() {
   if (cached_hits_idx_ == -1) {
     libtextclassifier3::Status status = RetrieveMoreHits();
     if (!status.ok()) {
-      ICING_LOG(ERROR) << "Failed to retrieve more hits "
-                       << status.error_message();
+      // ICING_LOG(ERROR) << "Failed to retrieve more hits "
+      //                  << status.error_message();
       return absl_ports::ResourceExhaustedError(
           "No more DocHitInfos in iterator");
     }
